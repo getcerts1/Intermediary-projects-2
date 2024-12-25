@@ -10,7 +10,7 @@ sammy.shape("turtle")
 
 
 colors = colorgram.extract("120123_r21786_g2048.jpg.webp", 7)
-print(colors)
+
 
 rgb_list = []
 for color in colors:
@@ -20,31 +20,30 @@ for color in colors:
     rgb_list.append((r,g,b))
 
 
-print(rgb_list)
+
 new_list = [(238, 246, 243),(1, 13, 31), (52, 25, 17),(219, 127, 106),
             (0, 0, 0), (0, 0, 139), (139, 0, 0), (0, 100, 0), (128, 0, 128), (255, 140, 0),
             (64, 64, 64)]
 
-sammy.speed("fastest")
+sammy.speed("normal")
 sammy.pensize(1)
 sammy.penup()
-sammy.backward(150)
-sammy.right(90)
-sammy.forward(150)
+sammy.setheading(245)
+sammy.forward(300)
 sammy.setheading(0)
 
-for i in range(100):
-    try:
-        if i % 10 == 0:
-            sammy.left(90)
-            sammy.forward(40)
-            sammy.left(90)
-            sammy.forward(400)
-            sammy.setheading(0)
-    except ZeroDivisionError:
-        continue
-    sammy.forward(40)
-    sammy.dot(20, random.choice(new_list))
+for i in range(1, 100 + 1):
+    sammy.dot(40, random.choice(new_list))
+    sammy.forward(80)
+
+
+    if i % 10 == 0:
+        sammy.setheading(90)
+        sammy.forward(80)
+        sammy.setheading(180)
+        sammy.forward(800)
+        sammy.setheading(0)
+
 
 
 
