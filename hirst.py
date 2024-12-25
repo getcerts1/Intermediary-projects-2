@@ -28,6 +28,7 @@ new_list = [(238, 246, 243),(1, 13, 31), (52, 25, 17),(219, 127, 106),
 sammy.speed("normal")
 sammy.pensize(1)
 sammy.penup()
+sammy.hideturtle()
 sammy.setheading(245)
 sammy.forward(300)
 sammy.setheading(0)
