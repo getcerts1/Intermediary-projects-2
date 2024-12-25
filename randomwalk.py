@@ -28,16 +28,23 @@ def color_list_gen(number_of_colors, lists):
         print(f"{i}:{color}")
 
 
+"""
 color_list_gen(20, colors_list)
 
-directions = [0, 90,180,270]
-timmy.pensize(20)
+timmy.pensize(1)
 timmy.speed("fastest")
 
-for i in range(100):
+
+tilt = 5
+
+for i in range(int(360/tilt)):
     timmy.pencolor(random.choice(colors_list))
-    timmy.setheading(random.choice(directions))
-    timmy.forward(40)
+    timmy.circle(100)
+    timmy.setheading(tilt)
+    tilt+=5
+
+
 
 
 screen.exitonclick()
+"""
